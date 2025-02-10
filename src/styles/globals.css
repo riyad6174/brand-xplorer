@@ -4,5 +4,5 @@
 
 /* Custom styles */
 body {
-  @apply bg-background text-text;
+  @apply font-sans text-text bg-background;
 }
