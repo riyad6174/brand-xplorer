@@ -11,10 +11,12 @@ module.exports = {
         background: '#F5F6F7', // Light gray
         text: '#111827', // Dark gray
         sectionText: '#637381',
+        footer: '#212B36',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'], // Default font
         serif: ['Merriweather', 'serif'],
+        mont: ['Montserrat', 'serif'],
       },
       container: {
         center: true,
