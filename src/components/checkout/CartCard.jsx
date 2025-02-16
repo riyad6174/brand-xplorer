@@ -3,7 +3,7 @@ import { HiOutlineTrash } from 'react-icons/hi2';
 
 function CartCard() {
   return (
-    <div className='w-full flex flex-col gap-4  py-4'>
+    <div className='w-full flex items-center justify-between gap-4  py-4'>
       <div className='flex items-center gap-5'>
         <input id='product1' type='checkbox' className='w-5 h-5 rounded-lg' />
         <img
@@ -20,7 +20,7 @@ function CartCard() {
         </div>
       </div>
 
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between items-center gap-4'>
         <div className='relative flex items-center max-w-[8rem] border-2 border-gray-200 rounded-lg bg-white'>
           <button
             type='button'
@@ -75,7 +75,7 @@ function CartCard() {
           </button>
         </div>
 
-        <div className='border-2 flex items-center justify-center py-2 px-[2px] rounded-lg cursor-pointer'>
+        <div className='border-2 flex items-center justify-center py-[10px] px-[10px] rounded-lg cursor-pointer'>
           <HiOutlineTrash className='text-2xl' />
         </div>
       </div>
