@@ -5,7 +5,7 @@ import { TbShoppingCartHeart } from 'react-icons/tb';
 import { FaStarHalfStroke } from 'react-icons/fa6';
 const ProductCard = () => {
   return (
-    <div className='bg-white shadow-md rounded-xl p-3 w-56'>
+    <div className='bg-white  rounded-xl p-3 w-56'>
       {/* Product Image Section */}
       <div className='relative'>
         <img
