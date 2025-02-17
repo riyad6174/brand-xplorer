@@ -1,9 +1,8 @@
 import React, { useRef } from 'react';
 import CustomSection from '../layout/CustomSection';
-import { GoClock } from 'react-icons/go';
 import ProductCard from '../product/ProductCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FaArrowRight, FaArrowLeft, FaClock } from 'react-icons/fa6';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa6';
 import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';

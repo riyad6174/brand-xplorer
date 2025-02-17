@@ -11,6 +11,7 @@ module.exports = {
         background: '#F5F6F7', // Light gray
         text: '#111827', // Dark gray
         sectionText: '#637381',
+        greenText: '#1D9E34',
         footer: '#212B36',
       },
       fontFamily: {

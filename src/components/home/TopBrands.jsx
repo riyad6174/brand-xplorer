@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/autoplay'; // Ensure this is imported
+import 'swiper/css/autoplay';
 import CustomSection from '../layout/CustomSection';
 import SectionTitle from '../common/SectionTitle';
 import { Autoplay } from 'swiper/modules';
