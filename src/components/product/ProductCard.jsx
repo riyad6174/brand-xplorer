@@ -3,6 +3,7 @@ import React from 'react';
 import { HiHeart } from 'react-icons/hi2';
 import { TbShoppingCartHeart } from 'react-icons/tb';
 import { FaStarHalfStroke } from 'react-icons/fa6';
+import Link from 'next/link';
 const ProductCard = () => {
   return (
     <div className='bg-white  rounded-xl p-3 w-56'>
@@ -23,9 +24,9 @@ const ProductCard = () => {
       </div>
 
       {/* Product Details */}
-      <h3 className='text-gray-900 font-semibold text-sm mt-2'>
+      <Link href={'#'} className='text-gray-900 font-semibold text-sm mt-2'>
         Puff-Sleeved Cotton Satin Kurti
-      </h3>
+      </Link>
 
       {/* Ratings & Sales */}
       <div className='flex items-center gap-2 text-sm text-gray-600 mt-1'>

@@ -1,24 +1,52 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 const Hero = () => {
   return (
-    <div className='container py-10  '>
+    <div className='container py-10'>
       <div className='grid grid-cols-3 md:grid-cols-3 gap-4'>
-        {/* Left Side - Large Image */}
-        <div className='relative col-span-2 '>
-          <img
-            src='/assets/banner/image1.png' // Replace with actual image URL
-            alt='Winter Collection'
-            className=' h-[580px] w-full object-cover rounded-xl'
-          />
+        {/* Left Side - Image Slider */}
+        <div className='relative col-span-2'>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            speed={1000}
+            className='h-[580px] w-full rounded-xl overflow-hidden'
+          >
+            <SwiperSlide>
+              <img
+                src='/assets/banner/image1.png'
+                alt='Winter Collection'
+                className='h-full w-full object-cover rounded-xl'
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src='/assets/banner/image2.png'
+                alt='Winter Collection Slide 2'
+                className='h-full w-full object-cover rounded-xl'
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src='/assets/banner/image3.png'
+                alt='Winter Collection Slide 3'
+                className='h-full w-full object-cover rounded-xl'
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
 
         {/* Right Side - Two Small Images */}
         <div className='flex flex-col gap-4'>
           {/* Top Right Image */}
-          <div className='relative  rounded-xl overflow-hidden'>
+          <div className='relative rounded-xl overflow-hidden'>
             <img
-              src='/assets/banner/image3.png' // Replace with actual image URL
+              src='/assets/banner/image3.png'
               alt='Online Shopping'
               className='h-[282px] w-full object-cover'
             />
@@ -30,9 +58,9 @@ const Hero = () => {
           </div>
 
           {/* Bottom Right Image */}
-          <div className='relative  rounded-xl overflow-hidden'>
+          <div className='relative rounded-xl overflow-hidden'>
             <img
-              src='/assets/banner/image2.png' // Replace with actual image URL
+              src='/assets/banner/image2.png'
               alt='Trade-In Offer'
               className='h-[282px] w-full object-cover'
             />
