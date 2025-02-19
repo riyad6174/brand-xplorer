@@ -3,20 +3,20 @@ import Navbar from '@/components/common/Navbar';
 import CustomSection from '@/components/layout/CustomSection';
 import OrderCard from '@/components/checkout/OrderCard';
 import OrderSidebar from '@/components/order/OrderSidebar';
+import ReviewCard from '@/components/checkout/ReviewCard';
+import ReviewCardTo from '@/components/checkout/ReviewCardTo';
 
-function Order() {
-  const [activeTab, setActiveTab] = useState('in-progress'); // Default active tab
+function Review() {
+  const [activeTab, setActiveTab] = useState('my-review'); // Default active tab
 
   const tabs = [
-    { id: 'waiting-payment', label: 'Waiting Payment' },
-    { id: 'in-progress', label: 'In Progress' },
-    { id: 'complete', label: 'Complete' },
-    { id: 'canceled', label: 'Canceled' },
+    { id: 'my-review', label: 'My Review' },
+    { id: 'to-review', label: 'To Review' },
   ];
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'waiting-payment':
+      case 'empty':
         return (
           <EmptyState
             title="It's empty here"
@@ -24,28 +24,21 @@ function Order() {
             buttonText='Shop Now'
           />
         );
-      case 'in-progress':
+      case 'my-review':
         return (
           <div className='mt-10'>
             {/* Example: Order in progress */}
-            <OrderCard status='inProgress' />
+            <ReviewCard status='inProgress' />
           </div>
         );
-      case 'complete':
+      case 'to-review':
         return (
           <div className='mt-10'>
             {/* Example: Completed Orders */}
-            <OrderCard status='Completed' />
+            <ReviewCardTo status='Completed' />
           </div>
         );
-      case 'canceled':
-        return (
-          <EmptyState
-            title='No Canceled Orders'
-            description='You have no canceled orders at the moment.'
-            buttonText='Browse Products'
-          />
-        );
+
       default:
         return null;
     }
@@ -64,7 +57,7 @@ function Order() {
           {/* Main Content */}
           <div className='md:w-4/5'>
             <main className='flex-1 pl-6'>
-              <h1 className='text-xl font-bold'>My Orders</h1>
+              <h1 className='text-xl font-bold'>Reviews</h1>
 
               {/* Order Status Tabs */}
               <div className='mt-4 flex space-x-4'>
@@ -93,7 +86,7 @@ function Order() {
   );
 }
 
-export default Order;
+export default Review;
 
 /* ----- Empty State Component ----- */
 const EmptyState = ({ title, description, buttonText }) => (

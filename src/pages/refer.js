@@ -1,12 +1,14 @@
-import AddressList from '@/components/card/AddressList';
 import ProfileCard from '@/components/card/ProfileCard';
-import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import CustomSection from '@/components/layout/CustomSection';
 import OrderSidebar from '@/components/order/OrderSidebar';
+import GenerateLink from '@/components/refer/GenerateLink';
+import ReferAndEarn from '@/components/refer/ReferAndEarn';
+import ReferFriendCard from '@/components/refer/ReferFriendCard';
+import RewardPointCard from '@/components/refer/RewardPointCard';
 import React from 'react';
 
-function address() {
+function refer() {
   return (
     <div>
       <Navbar />
@@ -18,20 +20,20 @@ function address() {
             </aside>
           </div>
           <div class='md:w-4/5'>
-            <main className='flex-1 pl-6'>
-              <h1 className='text-xl font-bold'>My Profile</h1>
-
+            <main className='flex-1 pl-3'>
               {/* Empty State for waiting payment */}
-              <div className='flex rounded-lg bg-white  items-center justify-center  mt-10'>
-                <AddressList />
+              <div className=' flex flex-col gap-5 '>
+                <ReferFriendCard />
+                <RewardPointCard />
+                <GenerateLink />
+                <ReferAndEarn />
               </div>
             </main>
           </div>
         </div>
       </CustomSection>
-      <Footer />
     </div>
   );
 }
 
-export default address;
+export default refer;
